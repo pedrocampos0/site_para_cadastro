@@ -1,0 +1,21 @@
+{% extends 'modelo.html' %}
+
+{% load static %}
+{% csrf_token %}
+
+{% block titulo %}
+    <title>Dados adicionais</title>
+{% endblock %}
+
+
+{% block conteudo %}
+
+<h3>Página inicial</h3>
+
+{% if user.perfil.nome_completo %}
+
+Bem vindo ao sistema {{ user.perfil.nome_completo }}.
+
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'modelo.html' %}
+{% csrf_token %}
+{% load static %}
+
+{% block titulo %}
+    <title>Ajuda</title>
+{% endblock %}
+
+{% block conteudo %}
+<h3>Sobre o projeto</h3>
+<p class="lead">Sistema para cadastro de usuário na seleção de estágio Frexco.</p>
+<p class="lead">Para utilizar a API deve-se registrar um novo usuário e após realizar a autenticação
+completar os dados adicionais obrigatórios. Todos os usuários cadastrados e devidamente autenticados podem visualizar a lista de usuários cadastrados
+clicando no botão "Cadastros" e depois em "Cadastrados" e também é possível importar essa lista
+em um arquivo .csv clicando no botão "Cadastros" e depois em "Exportar Dados dos Usuários cadastrados".
+Caso o usuário desejar atualizar os seus dados é só clicar no seu próprio username e depois em "Meus Dados" e
+se o usuário desejar sair da API é só clicar no seu username e depois em "Sair".</p>
+
+<h3>Passo a passo no GitHub</h3>
+<a href=https://github.com/pedrocampos0/site_para_cadastro>GitHub</a>
+
+
+{% endblock %}
