@@ -1,0 +1,41 @@
+{% extends 'modelo.html' %}
+
+{% csrf_token %}
+
+{% load static %}
+
+{% block titulo %}
+    <title>Cadastrados</title>
+{% endblock %}
+
+{% block conteudo %}
+<h3>
+    Lista de Usuários cadastrados
+
+</h3>
+
+<hr>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <tr>
+            <th>Usuário</th>
+            <th>Nome Completo</th>
+            <th>Data de nascimento</th>
+        </tr>
+
+        {% for Perfil in object_list %}
+        <tr>
+            <td>{{ Perfil.usuario }}</td>
+            <td>{{ Perfil.nome_completo }}</td>
+            <td>{{ Perfil.data_de_nascimento }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="3">Nenhum Usuário registrado.</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+</div>
+{% endblock %}
