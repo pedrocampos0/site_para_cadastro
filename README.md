@@ -6,11 +6,11 @@ cd site_para_cadastro
 ```
 
 ```
-pip install django (caso não instalado)
+pip install django
 ```
 
 ```
-pip install django-crispy-forms (caso não instalado)
+pip install django-crispy-forms
 ```
 
 ```
